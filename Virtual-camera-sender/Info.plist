@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>videosnap</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.hiddenloop.videosnap</string>
+	<key>CFBundleName</key>
+	<string>videosnap</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0.6</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>To capture audio from an attached device</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.7</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To capture video from an attached device</string>
+</dict>
+</plist>

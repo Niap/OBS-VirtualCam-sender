@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE1D3734265E4678001EF591 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1D3733265E4678001EF591 /* main.m */; };
+		CE1D373C265E46A4001EF591 /* Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1D373A265E46A4001EF591 /* Capture.m */; };
+		CE1D3740265E4755001EF591 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1D373F265E4755001EF591 /* Server.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		CE1D3730265E4678001EF591 /* Virtual-camera-sender */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Virtual-camera-sender"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1D3733265E4678001EF591 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE1D373A265E46A4001EF591 /* Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Capture.m; sourceTree = "<group>"; };
+		CE1D373B265E46A4001EF591 /* Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Capture.h; sourceTree = "<group>"; };
+		CE1D373D265E46FC001EF591 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1D373E265E4755001EF591 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		CE1D373F265E4755001EF591 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,11 @@
 		CE1D3732265E4678001EF591 /* Virtual-camera-sender */ = {
 			isa = PBXGroup;
 			children = (
+				CE1D373E265E4755001EF591 /* Server.h */,
+				CE1D373F265E4755001EF591 /* Server.m */,
+				CE1D373D265E46FC001EF591 /* Info.plist */,
+				CE1D373B265E46A4001EF591 /* Capture.h */,
+				CE1D373A265E46A4001EF591 /* Capture.m */,
 				CE1D3733265E4678001EF591 /* main.m */,
 			);
 			path = "Virtual-camera-sender";
@@ -118,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1D373C265E46A4001EF591 /* Capture.m in Sources */,
+				CE1D3740265E4755001EF591 /* Server.m in Sources */,
 				CE1D3734265E4678001EF591 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
