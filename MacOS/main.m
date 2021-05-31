@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 //#import "Capture.h"
 #import "Server.h"
-#include "video_generator.h"
+#include "../video_generator.h"
 
 #define HEIGHT 720
 #define WIDTH 1280
