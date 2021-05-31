@@ -64,9 +64,9 @@
         return;
     }
 
-    FILE * fp = fopen("/tmp/capture.yuv","a+");
-    fwrite(frameBytes, size.width*size.height*2, 1, fp);
-    fclose(fp);
+//    FILE * fp = fopen("/tmp/capture.yuv","a+");
+//    fwrite(frameBytes, size.width*size.height*2, 1, fp);
+//    fclose(fp);
     @autoreleasepool {
         CGFloat width = size.width;
         NSData *widthData = [NSData dataWithBytes:&width length:sizeof(width)];

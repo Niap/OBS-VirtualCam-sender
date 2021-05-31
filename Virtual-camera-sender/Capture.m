@@ -46,17 +46,12 @@
 
 
 - (bool) setupDevice:(NSString *)udid {
-   
-    
     self.mDevice = [AVCaptureDevice deviceWithUniqueID: udid];
-
     if (self.mDevice == nil) {
         NSLog(@"device with udid '%@' not found", udid);
         return false;
     }
-    
     [self.mSession beginConfiguration];
-
     // Add session input
     NSError *error;
     self.mDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:self.mDevice error:&error];
@@ -66,7 +61,6 @@
     } else {
         [self.mSession addInput:self.mDeviceInput];
     }
-    
     // Add session output
     self.mDeviceOutput = [[AVCaptureVideoDataOutput alloc] init];
     self.mDeviceOutput.alwaysDiscardsLateVideoFrames = YES;
@@ -76,11 +70,8 @@
         [NSNumber numberWithUnsignedInt:720], (id)kCVPixelBufferHeightKey,
         [NSNumber numberWithUnsignedInt:kCVPixelFormatType_422YpCbCr8], kCVPixelBufferPixelFormatTypeKey,
         nil];
-
     dispatch_queue_t videoQueue = dispatch_queue_create("videoQueue", DISPATCH_QUEUE_SERIAL);
-
     [self.mDeviceOutput setSampleBufferDelegate:self queue:videoQueue];
-
     [self.mSession addOutput:self.mDeviceOutput];
     [self.mSession commitConfiguration];
     [self.mSession startRunning];
