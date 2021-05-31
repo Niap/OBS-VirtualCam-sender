@@ -31,15 +31,6 @@ void YUV420ToUYVY422( uint8_t* uyvy422,  uint8_t* y, uint8_t* u,uint8_t * v, int
         }
         
    }
-//    for(i=0;i<height;i++){
-//       if((i%2)==0)continue;
-//       for(j=0;j<(width/2);j++){
-//           if((4*j+3)>(2*width))break;
-//           uyvy422[i*2*width+4*j+2] = v[i*(width/2)+j];
-//       }
-//        k++;
-//   }
-
   
 }
 
@@ -72,7 +63,6 @@ int main(int argc, const char * argv[]) {
         while( time < 10000 ){
             video_generator_update(&gen);
             YUV420ToUYVY422(buffer,gen.y,gen.u,gen.v,WIDTH,HEIGHT);
-            //memcpy(buffer, gen.y, gen.ybytes);
             [server sendFrameWithSize:CGSizeMake(WIDTH, HEIGHT) timestamp:0 fpsNumerator:10 fpsDenominator:10 frameBytes:buffer];
             time += 33;
             usleep(33*1000);
