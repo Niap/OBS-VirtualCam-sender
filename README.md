@@ -16,3 +16,11 @@ cmake --build ./build --config Debug --target ALL_BUILD
 4. DO NOT use control-c to interapt programe ,let the programe filish itself. IT"S IMPORTANT!.
 
 # For Mac
+
+1. Download From (johnboiles/obs-mac-virtualcam)[https://github.com/johnboiles/obs-mac-virtualcam/releases] or build from source if you need.
+2. Install the pkg package or copy the plugin file to target DAL folder.
+3. Build source from MacOS folder. 
+```
+cmake . & make
+```
+4. open zoom or other software then run our OBS-virualcam-serder program.
