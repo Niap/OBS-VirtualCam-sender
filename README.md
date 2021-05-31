@@ -13,5 +13,6 @@ regsvr32 "C:\Program Files\obs-studio\bin\32bit\obs-virtualsource.dll"
 cmake -B build .
 cmake --build ./build --config Debug --target ALL_BUILD
 ```
+4. DO NOT use control-c to interapt programe ,let the programe filish itself. IT"S IMPORTANT!.
 
 # For Mac
