@@ -15,7 +15,7 @@
 #define BUFSIZE WIDTH*HEIGHT*2
 
 
-void YUV420ToUYVY422( uint8_t* uyvy422,  uint8_t* y, uint8_t* u,uint8_t * v, int width, int height)
+void YUV444ToUYVY422( uint8_t* uyvy422,  uint8_t* y, uint8_t* u,uint8_t * v, int width, int height)
 {
     int nums=width*height;
     int i,j,k=0;
@@ -62,7 +62,7 @@ int main(int argc, const char * argv[]) {
         uint8_t buffer[BUFSIZE];
         while( time < 10000 ){
             video_generator_update(&gen);
-            YUV420ToUYVY422(buffer,gen.y,gen.u,gen.v,WIDTH,HEIGHT);
+            YUV444ToUYVY422(buffer,gen.y,gen.u,gen.v,WIDTH,HEIGHT);
             [server sendFrameWithSize:CGSizeMake(WIDTH, HEIGHT) timestamp:0 fpsNumerator:10 fpsDenominator:10 frameBytes:buffer];
             time += 33;
             usleep(33*1000);
