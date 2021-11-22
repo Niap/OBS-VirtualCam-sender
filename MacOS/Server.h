@@ -19,6 +19,21 @@ typedef enum {
 } MachMsgId;
 
 
+enum {
+  PTFrameTypeVideo = 100,
+};
+
+typedef struct _PTVideoFrame {
+    uint32_t height;
+    uint32_t width;
+    uint32_t length;
+    uint8_t data[0];
+} PTVideoFrame;
+
+
+static const int VMEPeertalkPortNumber = 2345;
+static const NSTimeInterval PTAppReconnectDelay = 1.0;
+
 @interface Server : NSObject
 
 - (void)run;
