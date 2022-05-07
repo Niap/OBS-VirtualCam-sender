@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define MACH_SERVICE_NAME "com.johnboiles.obs-mac-virtualcam.server"
+#define MACH_SERVICE_NAME "com.obsproject.obs-mac-virtualcam.server"
 typedef enum {
     //! Initial connect message sent from the client to the server to initate a connection
     MachMsgIdConnect = 1,

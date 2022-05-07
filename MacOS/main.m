@@ -4,7 +4,7 @@
 //
 //  Created by VislaNiap on 2021/5/26.
 //
-
+#import <mach/mach_time.h>
 #import <Foundation/Foundation.h>
 //#import "Capture.h"
 #import "Server.h"
@@ -63,7 +63,8 @@ int main(int argc, const char * argv[]) {
         while( time < 10000 ){
             video_generator_update(&gen);
             YUV444ToUYVY422(buffer,gen.y,gen.u,gen.v,WIDTH,HEIGHT);
-            [server sendFrameWithSize:CGSizeMake(WIDTH, HEIGHT) timestamp:0 fpsNumerator:10 fpsDenominator:10 frameBytes:buffer];
+            UInt64 timestamp = mach_absolute_time();
+            [server sendFrameWithSize:CGSizeMake(WIDTH, HEIGHT) timestamp:timestamp fpsNumerator:10 fpsDenominator:10 frameBytes:buffer];
             time += 33;
             usleep(33*1000);
         }
